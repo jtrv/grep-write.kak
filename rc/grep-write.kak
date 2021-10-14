@@ -19,7 +19,7 @@ def -hidden grep-write-impl -params 4 %{
 }
 
 def grep-write -params ..1 -docstring "
-grep-write: apply changes specified in the current *grep* buffer to their respective file
+apply changes specified in the current *grep* buffer to their respective file
 " %{
   eval -no-hooks -save-regs 'csif' %{
     reg s ""
@@ -49,4 +49,12 @@ grep-write: apply changes specified in the current *grep* buffer to their respec
       [ $f -gt 0 ] && printf ", %i failed" "$f"
     }
   }
+}
+
+def grep-write-quit -docstring "
+apply changes specified in the current *grep* buffer and quit
+" %{
+  grep-write;
+  # give user a chance to see results
+  menu 'quit' quit 'resume' nop 
 }
