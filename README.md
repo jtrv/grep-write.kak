@@ -8,9 +8,9 @@ Special thanks to [occivink][1] for creating [kakoune-find][2] where this was im
 
 ### With [plug.kak][3]
 
-The recommended way to install **kakoune-write-grep** is to use [plug.kak][3] plugin manager.
+The recommended way to install **kakoune-grep-write** is to use [plug.kak][3] plugin manager.
 
-To install **kakoune-write-grep** add this to the `kakrc`:
+To install **kakoune-grep-write** add this to the `kakrc`:
 
 ``` kak
 plug "JacobTravers/kakoune-grep-write"
