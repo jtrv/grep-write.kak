@@ -1,9 +1,18 @@
+declare-option bool grep_write_ignore_whitespace false
+
 def -hidden grep-write-impl -params 4 %{
   eval -no-hooks -draft "edit -existing %arg{1}"
   eval -buffer %arg{1} %{
     try %{
-      # go to the target line and select it (except for \n)
-      exec "%arg{2}g<a-x>H"
+      %sh{
+        if "$grep_write_ignore_whitespace"; then
+          # select target line (excluding preceding whitespace and \n)
+          printf "exec '%arg{2}ggiGl'"
+        else
+          # select target line (excluding \n)
+          printf "exec '%arg{2}g<a-x>H'"
+        fi
+      }
       # check for noop, and abort if it's one
       reg / %arg{3}
       exec <a-K><ret>
