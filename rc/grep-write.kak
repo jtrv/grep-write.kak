@@ -5,7 +5,7 @@ def -hidden grep-write-impl -params 4 %{
   eval -buffer %arg{1} %{
     try %{
       %sh{
-        if "$grep_write_ignore_whitespace"; then
+        if "$kak_opt_grep_write_ignore_whitespace"; then
           # select target line (excluding preceding whitespace and \n)
           printf "exec '%arg{2}ggiGl'"
         else
