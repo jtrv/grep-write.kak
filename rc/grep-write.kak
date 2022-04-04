@@ -1,5 +1,5 @@
 def -hidden grep-write-impl -params 4 %{
-  eval -no-hooks -draft "edit -existing %arg{1}"
+  eval -verbatim -no-hooks -draft -- edit -existing %arg{1}
   eval -buffer %arg{1} %{
     try %{
       # go to the target line and select it (except for \n)
