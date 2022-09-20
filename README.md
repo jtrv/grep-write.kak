@@ -1,4 +1,4 @@
-# kakoune-grep-write
+# grep-write.kak
 
 This plugin is designed as the "replace" part of kakoune's "find & replace" workflow.
 
@@ -6,21 +6,27 @@ Special thanks to [occivink][1] for creating [kakoune-find][2] where this was im
 
 ## Installation
 
-### With [plug.kak][3]
+### With [cork.kak][3]
 
-The recommended way to install **kakoune-grep-write** is to use [plug.kak][3] plugin manager.
+The recommended way to install **grep-write.kak** is to use [cork.kak][3] plugin manager.
 
-To install **kakoune-grep-write** add this to the `kakrc`:
+To install **grep-write.kak** with [cork.kak][3] add this to your `kakrc`:
 
 ``` kak
-plug "JacobTravers/kakoune-grep-write"
+cork grep-write https://github.com/JacobTravers/grep-write.kak
 ```
 
-Then reload the configuration file or restart Kakoune and run `:plug-install`.
+### With [plug.kak][4]
+
+To install **grep-write.kak** with [plug.kak][4] add this to your `kakrc`:
+``` kak
+plug "JacobTravers/grep-write.kak"
+```
+
 
 ## Finding
 
-Call the builtin [`grep`][4] command.
+Call the builtin [`grep`][5] command.
 
 ## Replacing
 
@@ -38,5 +44,6 @@ Unlicense
 
 [1]: https://github.com/occivink
 [2]: https://github.com/occivink/kakoune-find
-[3]: https://github.com/andreyorst/plug.kak
-[4]: https://github.com/mawww/kakoune/blob/master/rc/tools/grep.kak
+[3]: https://github.com/topisani/cork.kak
+[4]: https://github.com/andreyorst/plug.kak
+[5]: https://github.com/mawww/kakoune/blob/master/rc/tools/grep.kak
