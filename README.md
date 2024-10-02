@@ -15,7 +15,7 @@ The recommended way to install **grep-write.kak** is to use [kak-bundle][3] plug
 To install **grep-write.kak** with [kak-bundle][3] add this to your `kakrc`:
 
 ``` kak
-bundle grep-write https://github.com/jtrv/grep-write.kak
+bundle grep-write.kak https://github.com/jtrv/grep-write.kak
 ```
 
 ### With [plug.kak][4]
